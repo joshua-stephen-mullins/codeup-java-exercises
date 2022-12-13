@@ -57,6 +57,5 @@ public class ConsoleExercises {
 //        double userWidth = Double.parseDouble(scannerWidth.nextLine());
 
         System.out.println("The area of your room is: " + (userWidth * userLength) + " and your room's perimeter is: " + ((userWidth * 2) + (userLength * 2)));
-
     }
 }
