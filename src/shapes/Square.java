@@ -14,14 +14,14 @@ public class Square extends Quadrilateral{
     }
 
     public double getArea() {
-        return this.side * 2;
+        return this.side * this.side;
     }
 
-    public void setLength(double length) {
+    public void setLength(double side) {
         this.side = length;
     }
 
-    public void setWidth(double width) {
+    public void setWidth(double side) {
         this.side = width;
     }
 }

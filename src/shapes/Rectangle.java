@@ -12,7 +12,7 @@ public class Rectangle extends Quadrilateral implements Measurable {
     }
 
     public double getPerimeter() {
-        return 2 * length + 2 * width;
+        return (2 * length) + (2 * width);
     }
 
     public double getArea() {
@@ -26,13 +26,4 @@ public class Rectangle extends Quadrilateral implements Measurable {
     public void setWidth(double width) {
         this.width = width;
     }
-
-    public double getLength() {
-        return this.length;
-    }
-
-    public double getWidth() {
-        return this.width;
-    }
-
 }
