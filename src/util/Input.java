@@ -28,16 +28,17 @@ public class Input {
 
     public static int getInt() {
         int finalUserInput = 0;
-        try {
-            String userInput = getString();
-            finalUserInput = Integer.parseInt(userInput);
-        } catch (Exception e) {
-            System.out.println("Invalid input: Please enter a number.");
-            getInt();
-        }
+        do {
+            try {
+                String userInput = getString();
+                finalUserInput = Integer.parseInt(userInput);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input: Please enter a number.");
+            }
+            ;
+        } while (finalUserInput == 0);
         return finalUserInput;
     };
-
 
     public static double getDouble(double min, double max) {
         System.out.printf("Enter a number between %s and %s", min, max);
@@ -50,13 +51,14 @@ public class Input {
 
     public static double getDouble() {
         double finalUserInput = 0;
-        try {
-            String userInput = getString();
-            finalUserInput = Double.parseDouble(userInput);
-        } catch (Exception e) {
-            System.out.println("Invalid input: Please enter a number.");
-            getDouble();
-        }
+        do {
+            try {
+                String userInput = getString();
+                finalUserInput = Double.parseDouble(userInput);
+            } catch (Exception e) {
+                System.out.println("Invalid input: Please enter a number.");
+            }
+        } while (finalUserInput == 0);
         return finalUserInput;
     };
 

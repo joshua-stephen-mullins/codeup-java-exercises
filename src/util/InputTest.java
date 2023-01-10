@@ -11,7 +11,7 @@ public class InputTest {
 //        System.out.println(Input.getDouble(1, 10));
 //        System.out.println(Input.getDouble());
 
-        System.out.println("int: " + Input.getInt());
+//        System.out.println("int: " + Input.getInt());
         System.out.println("double: " + Input.getDouble());
 
     }
