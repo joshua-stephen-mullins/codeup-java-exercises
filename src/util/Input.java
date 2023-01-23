@@ -19,11 +19,20 @@ public class Input {
 
     public static int getInt(int min, int max) {
         System.out.printf("Enter a number between %d and %d", min, max);
-        int input = scanner.nextInt();
-        if (input < min | input > max) {
-            getInt(min, max);
-        }
-        return input;
+        int finalUserInput = 0;
+        do {
+            try {
+                int userInput = Integer.parseInt(getString());
+                if (userInput > min && userInput < max) {
+                    finalUserInput = userInput;
+                } else {
+                    System.out.println("Invalid input: Please enter a number between the designated values.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input: Please enter a number.");
+            };
+        } while (finalUserInput == 0);
+        return finalUserInput;
     };
 
     public static int getInt() {
@@ -34,19 +43,27 @@ public class Input {
                 finalUserInput = Integer.parseInt(userInput);
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input: Please enter a number.");
-            }
-            ;
+            };
         } while (finalUserInput == 0);
         return finalUserInput;
     };
 
     public static double getDouble(double min, double max) {
         System.out.printf("Enter a number between %s and %s", min, max);
-        double input = scanner.nextDouble();
-        if (input < min | input > max) {
-            getDouble(min, max);
-        }
-        return input;
+        double finalUserInput = 0;
+        do {
+            try {
+                double userInput = Double.parseDouble(getString());
+                if (userInput > min && userInput < max) {
+                    finalUserInput = userInput;
+                } else {
+                    System.out.println("Invalid input: Please enter a number between the designated values.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input: Please enter a number.");
+            };
+        } while (finalUserInput == 0);
+        return finalUserInput;
     };
 
     public static double getDouble() {
@@ -61,5 +78,4 @@ public class Input {
         } while (finalUserInput == 0);
         return finalUserInput;
     };
-
 }
